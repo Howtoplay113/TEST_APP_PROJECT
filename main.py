@@ -7,16 +7,18 @@ from kivy.uix.label import Label
 
 class MyApp(App):
     def build(self):
+        self.counter = 0
         layout = BoxLayout(orientation='vertical')
-        self.label = Label(text="Нажми кнопку")
-        button = Button(text="Нажми меня")
+        self.label = Label(text=f"Тут отображается количество нажатий кнопки за сеанс\n\nСчетчик: 0")
+        button = Button(text=f"Простая кнопка\n\nНажми меня")
         button.bind(on_press=self.on_button_press)
         layout.add_widget(self.label)
         layout.add_widget(button)
         return layout
 
     def on_button_press(self, instance):
-        self.label.text = "Кнопка нажата!"
+        self.counter += 1
+        self.label.text = f"Тут отображается количество нажатий кнопки за сеанс\n\nСчетчик: {self.counter}"
 
 if __name__ == "__main__":
     MyApp().run()
