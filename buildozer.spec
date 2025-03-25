@@ -61,13 +61,13 @@ orientation = portrait
 #
 
 #
-# author = © Copyright Info
+author = © Roman Sychev
 
 # change the major version of python used by the app
-osx.python_version = 3
+osx.python_version = 3.13.2
 
 # Kivy version to use
-osx.kivy_version = 1.9.1
+osx.kivy_version = 2.3.1
 
 #
 # Android specific
